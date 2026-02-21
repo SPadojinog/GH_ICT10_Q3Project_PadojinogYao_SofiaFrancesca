@@ -14,5 +14,6 @@ def player_list (e):
     ]
 
     for player in players:
-        display(players, target='output')
+        display(player, target='output')
+
 
