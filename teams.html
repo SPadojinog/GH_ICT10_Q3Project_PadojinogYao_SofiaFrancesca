@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of Players</title>
+    <title>Intramurals Eligibility Checker</title>
 
     <!-- PyScript -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
@@ -18,20 +18,19 @@
     <style>
         body {
             font-family: "Sour Gummy", cursive, sans-serif;
-            background-image: url(https://i.pinimg.com/736x/14/a7/11/14a71160d35483c769b17892654f6b38.jpg);
+            background-image: url(https://i.pinimg.com/1200x/89/7d/63/897d6330c13666cb81f99e269e4baaaa.jpg);
             margin: 0;
             padding: 0;
             background-position: center;
         }
 
         nav {
-            background: rgba(18, 53, 36, 0.95);
+            background: #660B05;
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #F5E6D3;
-            border-bottom: 4px solid #C75B12;
+            color: white;
         }
 
         nav h2 {
@@ -41,20 +40,15 @@
         }
 
         nav .links a {
-            color: #F5E6D3;
+            color: white;
             text-decoration: none;
             margin: 0 12px;
             font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav .links a:hover {
-            color: #C75B12;
         }
 
         .banner {
-            background-color: rgba(18, 53, 36, 0.95);
-            color: #F5E6D3;
+            background-color: #A31D1D;
+            color: white;
             padding: 50px 20px;
             text-align: center;
             border-radius: 0 0 20px 20px;
@@ -64,66 +58,43 @@
         .banner h1 {
             font-family: "Chewy", cursive;
             font-size: 40px;
-            color: #C75B12;
         }
 
         .menu-card {
-            background: rgba(18, 53, 36, 0.95);
-            border-radius: 25px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 22px;
             padding: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-            color: #F5E6D3;
+            box-shadow: 6px 6px 18px rgba(0,0,0,0.15);
         }
 
         .menu-card h3 {
             font-family: "Chewy", cursive;
-            color: #C75B12;
-        }
-
-        .form-control {
-            background-color: #F5E6D3;
-            border-radius: 12px;
-            border: none;
-        }
-
-        .btn {
-            background-color: #C75B12;
-            border: none;
-            border-radius: 25px;
-            transition: 0.3s;
-            color: #F5E6D3;
-        }
-
-        .btn:hover {
-            background-color: #E06A1A;
+            color: #A31D1D;
         }
 
         .divider {
-            border-top: 2px dashed #C75B12;
+            border-top: 2px dashed #A31D1D;
             margin: 20px 0;
         }
 
         #result {
-            background: #F5E6D3;
+            background: #fff4f4;
             padding: 15px;
-            border-radius: 15px;
+            border-radius: 12px;
             text-align: center;
-            min-height: 20px;
+            min-height: 70px;
             font-weight: bold;
-            color: #0F2F1E;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: #660B05;
         }
 
-
-        .Button-container {
+        .back-sign-up {
+            text-align: center;
             margin: 40px 0 60px 0;
         }
 
-        .Button-container a {
-            background-color: rgba(18, 53, 36, 0.95);
-            color: #F5E6D3;
+        .back-sign-up a {
+            background-color: #A31D1D;
+            color: white;
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -133,13 +104,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .Button-container a:hover {
-            background-color: #E06A1A;
+        .back-sign-up a:hover {
+            background-color: #C62828;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         footer {
-            background-color: rgba(18, 53, 36, 0.95);
-            color: #F5E6D3;
+            background-color: #660B05;
+            color: white;
             text-align: center;
             padding: 30px 20px;
             margin-top: 40px;
@@ -150,26 +122,57 @@
         footer p {
             margin: 5px 0;
         }
+
+        footer .social-links {
+            margin: 10px 0;
+        }
+
+        footer .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        footer .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer .contact-info {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                padding: 20px 15px;
+            }
+            footer .contact-info {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    
     <!-- NAVIGATION BAR -->
     <nav>
         <h2>OBMC GH Intramurals</h2>
         <div class="links">
             <a href="index.html">Sign Up</a>
-            <a href="teams.html" class="active">Team Checker</a>
+            <a href="teams.html">Team Checker</a>
             <a href="players.html">Players</a>
         </div>
     </nav>
 
+    <!-- BANNER -->
     <div class="banner">
         <h1>Intramurals Registration & Eligibility Checker</h1>
         <p>Check if you are qualified to join the Intramurals</p>
     </div>
 
-    <!-- TEAM FORM -->
+    <!-- STUDENT INFO AND CHECKER -->
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
@@ -204,41 +207,31 @@
                         <br>
                         
                         <!-- CHECKER BUTTON -->
-                        <button class="btn w-100 fw-bold py-2" py-click="check_eligibility"> Check Eligibility </button>
+                        <button class="btn btn-danger w-100 fw-bold py-2" py-click="check_eligibility"> Check Eligibility </button>
 
                         <div class="divider"></div>
 
                         <!-- DISPLAY OF RESULTS -->
                         <h4>Result</h4>
                         <div id="result">No result yet.</div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- BACK & NEXT BUTTON -->
-    <div class="Button-container">
-        <div class="row">
-            <div class="col-6 text-end">
-                <a href="index.html" >← Back to Sign Up</a>
-            </div>
-            <div class="col-6 text-start">
-                <a href="players.html">Check Players →</a>
-            </div>
-        </div>
+    <!-- BACK TO HOME BUTTON -->
+    <div class="back-sign-up">
+        <a href="index.html">← Back to Sign Up</a>
     </div>
 
     <!-- FOOTER -->
     <footer>
         <p>🏫 OBMC GH Intramurals</p>
-        <p>San Juan City, Greenhills   |   info@obmcintramuralsgh.edu.ph</p>
-        <p class="contact-info">SOFIA LAURENCE F. PADOJINOG (padojinog.sf@obmontessori.edu.ph) |     10 - SAPPHIRE     |    FRANCESCA JEAN K. YAO  (yao.fjk@obmontessori.edu.ph) </p>
+        <p>San Juan City, Greenhills | info@obmcintramuralsgh.edu.ph</p>
+        <p class="contact-info">SOFIA LAURENCE F. PADOJINOG | 10 - SAPPHIRE | padojinog.sf@obmontessori.edu.ph</p>
     </footer>
 
     <py-script src="main.py"></py-script>
+
 </body>
-
 </html>
-
-
