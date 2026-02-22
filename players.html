@@ -174,10 +174,15 @@
             <div class="col-md-6 mx-auto">
                 <div class="menu-card">
 
-                    <!-- TEAM CHECKER -->
+                    <!-- TEAM CHECKER: YAO -->
                     <h3 class="text-center" text-color="#C75B12">Your Intramurals Team Members:</h3>
                     <py-script src="players.py"></py-script>
-                    <button type="button" class="btn w-100 fw-bold py-2" color="#C75B12" py-click="player_list">See List</button>
+                    <div class="d-flex gap-2 justify-content-center flex-wrap">
+                        <button type="button" class="btn fw-bold py-2 flex-fill" py-click="blue_list"> Blue Bears 🐻</button>
+                        <button type="button" class="btn fw-bold py-2 flex-fill" py-click="red_list">Red Bulldogs 🐶</button>
+                        <button type="button" class="btn fw-bold py-2 flex-fill" py-click="yellow_list">Yellow Tigers 🐯</button>
+                        <button type="button" class="btn fw-bold py-2 flex-fill" py-click="green_list">Green Hornets 🐝</button>
+                    </div>
                     
                     <div class="divider"></div>
                     <div style= "text-align: center;" id="output"></div>
@@ -187,11 +192,11 @@
         </div>
     </div>
 
-    <!-- BACK TO HOME BUTTON -->
+    <!-- BACK & NEXT BUTTON -->
     <div class="check-team-here">
-        <a href="teams.html">Check Your Team Here! →</a>
+        <a href="teams.html"> ← Back to Team Checker! </a>
     </div>
-
+    
     <!-- FOOTER -->
     <footer>
         <p>🏫 OBMC GH Intramurals</p>
@@ -201,6 +206,7 @@
     
 </body>
 </html> 
+
 
 
 
