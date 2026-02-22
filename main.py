@@ -1,4 +1,4 @@
- #Skills Test
+ #Sign Up
 from pyscript import display, document
 
 
@@ -28,4 +28,5 @@ def sign_up_account(e):
         display("❌ Password must contain at least one letter.", target="output")
     
     else:
+
         display("✅ Account successfully created!", target="output")
