@@ -11,19 +11,19 @@ def check_eligibility(e):
     document.getElementById("result").innerHTML = ""
 
     # INFORMATION
-    if not grade or not section or not registered or not medical:
-        display("❌ Please fill all fields.", target="result")
+    if not grade and not section and not registered and not medical:
+        display(f"❌ Please fill all fields.", target="result")
 
     grade = int(grade)
     registered = registered.value
     medical = medical.value
 
     if registered != "Yes":
-        display("❌ You must register online.", target="result")
+        display(f"❌ You must register online.", target="result")
     if medical != "Yes":
-        display("❌ You need medical clearance.", target="result")
+        display(f"❌ You need medical clearance.", target="result")
     if grade < 7 or grade > 10:
-        display("❌ Only Grades 7-10 are eligible.", target="result")
+        display(f"❌ Only Grades 7-10 are eligible.", target="result")
 
     teams = {
         "emerald": "Blue Bears 🐻",
@@ -35,6 +35,7 @@ def check_eligibility(e):
     if section in teams:
         display(f"🎉 Eligible! You are Team {teams[section]}!", target="result")
     else:
-        display("❌ Invalid section.", target="result")
+        display(f"❌ Invalid section.", target="result")
+
 
 
