@@ -2,7 +2,7 @@
 from pyscript import display, document
 
 
-def show_team(team_list):
+def show_team(e):
     document.getElementById("output").innerHTML = ""
 
     greens = [
@@ -38,9 +38,6 @@ def show_team(team_list):
     yellows = greens
 
     
-for player in team_list:
-    display(player, target="output")
-    
 def green_list(event):
     display(greens, target="output")
 
@@ -52,3 +49,4 @@ def red_list(event):
 
 def yellow_list(event):
     display(yellows, target="output")
+
