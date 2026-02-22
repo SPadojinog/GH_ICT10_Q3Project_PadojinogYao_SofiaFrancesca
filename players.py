@@ -2,7 +2,7 @@
 from pyscript import display, document
 
 
-def green_list (e):
+def players_list (e):
     document.getElementById('output').innerHTML = " "
 
     greens = [
@@ -45,6 +45,7 @@ def green_list (e):
         display(yellows, target='output')
     for reds in reds:
         display(reds, target='output')
+
 
 
 
