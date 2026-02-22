@@ -20,13 +20,10 @@ def check_eligibility(e):
 
         if registered != "Yes":
             display("❌ You must register online.", target="result")
-
         elif medical != "Yes":
             display("❌ You need medical clearance.", target="result")
-
         elif grade < 7 or grade > 10:
             display("❌ Only Grades 7-10 are eligible.", target="result")
-
         else:
             teams = {
                 "emerald": "Blue Bears 🐻",
@@ -39,3 +36,4 @@ def check_eligibility(e):
                 display(f"🎉 Congratulations! You are Eligible! You're Team {teams[section_input]}!", target="result")
             else:
                 display("❌ Invalid section.", target="result")
+
