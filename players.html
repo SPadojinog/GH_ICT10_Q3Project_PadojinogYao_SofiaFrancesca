@@ -65,7 +65,7 @@
         .menu-card {
             background: rgba(18, 53, 36, 0.95);
             border-radius: 25px;
-            padding: 30px;
+            padding: 35px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.35);
             color: #F5E6D3;
         }
@@ -73,37 +73,25 @@
         .menu-card h3 {
             font-family: "Chewy", cursive;
             color: #C75B12;
-        }
-
-        .form-control {
-            background-color: #F5E6D3;
-            border-radius: 12px;
-            border: none;
+            margin-bottom: 25px;
         }
 
         .btn {
-            background-color: #C75B12;
-            border: none;
             border-radius: 25px;
             transition: 0.3s;
-            color: #F5E6D3;
-        }
-
-        .btn-danger:hover {
-            background-color: #E06A1A;
         }
 
         .divider {
             border-top: 2px dashed #C75B12;
-            margin: 20px 0;
+            margin: 25px 0;
         }
 
         #output {
             background: #F5E6D3;
-            padding: 15px;
+            padding: 20px;
             border-radius: 15px;
             text-align: center;
-            min-height: 20px;
+            min-height: 40px;
             font-weight: bold;
             color: #0F2F1E;
             display: flex;
@@ -168,51 +156,42 @@
         <p>Click the button to see a list of your team's players.</p>
     </div>
 
-    <!-- FORM -->
+    <!-- PLAYER LIST: YAO -->
     <div class="container">
         <div class="row">
-            <div class="col-9 mx-auto">
+            <div class="col-md-6 col-lg-5 mx-auto">
                 <div class="menu-card">
-
-                    <!-- TEAM CHECKER: YAO -->
                     <h3 class="text-center">Your Intramurals Team Members:</h3>
                     <py-script src="players.py"></py-script>
-                    <div class="d-flex gap-3 justify-content-center">
+                    <div class="d-flex gap-3 justify-content-center mb-3">
                         <button type="button" class="btn btn-primary fw-bold py-2 px-3" py-click="blue_list">Blue Bears 🐻</button>
                         <button type="button" class="btn btn-danger fw-bold py-2 px-3" py-click="red_list">Red Bulldogs 🐶</button>
-                        <button type="button" class="btn btn-warning fw-bold py-2 px-3" py-click="yellow_list">Yellow Tigers 🐯 </button>
+                        <button type="button" class="btn btn-warning fw-bold py-2 px-3" py-click="yellow_list">Yellow Tigers 🐯</button>
                         <button type="button" class="btn btn-success fw-bold py-2 px-3" py-click="green_list">Green Hornets 🐝</button>
                     </div>
-                    
-                    <div class="divider"></div>
-                    <div style= "text-align: center;" id="output"></div>
 
+                    <div class="divider"></div>
+                    <div id="output"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- BACK & NEXT BUTTON -->
+    <!-- BACK BUTTON -->
     <div class="check-team-here">
         <a href="teams.html"> ← Back to Team Checker! </a>
     </div>
-    
+
     <!-- FOOTER -->
     <footer>
         <p>🏫 OBMC GH Intramurals</p>
-        <p>San Juan City, Greenhills   |   info@obmcintramuralsgh.edu.ph</p>
-        <p class="contact-info">SOFIA LAURENCE F. PADOJINOG (padojinog.sf@obmontessori.edu.ph) |     10 - SAPPHIRE     |    FRANCESCA JEAN K. YAO  (yao.fjk@obmontessori.edu.ph) </p>
+        <p>San Juan City, Greenhills | info@obmcintramuralsgh.edu.ph</p>
+        <p>
+            SOFIA LAURENCE F. PADOJINOG (padojinog.sf@obmontessori.edu.ph) |
+            10 - SAPPHIRE |
+            FRANCESCA JEAN K. YAO (yao.fjk@obmontessori.edu.ph)
+        </p>
     </footer>
-    
+
 </body>
-</html> 
-
-
-
-
-
-
-
-
-
-
+</html>
