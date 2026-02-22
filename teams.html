@@ -179,40 +179,42 @@
             <div class="col-md-6 mx-auto">
                 <div class="menu-card">
 
-                    <!-- TEAM CHECKER -->
+                    <!-- STUDENT INFORMATION -->
                     <h3 class="text-center">Student Information</h3>
-                        <label for="grade" class="fw-bold">Grade Level</label>
-                        <input type="number" id="grade" class="form-control mb-3" placeholder="Enter your JHS Grade" min="7" max="10" required>
-                        <label for="section" class="fw-bold">Section</label>
-                        <input type="text" id="section" class="form-control mb-3" placeholder="Enter your JHS Section" required>
+                        <label class="fw-bold">Grade Level</label>
+                        <input type="number" id="grade" class="form-control mb-3" placeholder="Enter your JHS Grade" min="7" max="10">
 
+                        <label class="fw-bold">Section</label>
+                        <input type="text" id="section" class="form-control mb-3" placeholder="Enter your JHS Section">
+
+                    <!-- STUDENT REQUIREMENTS -->
                     <h3 class="text-center">Eligibility Requirements</h3>
-                        <div class="row text-center mt-3">
-                            <div class="col-6">
-                                <label class="fw-bold d-block">Registered Online?</label>
-                                    <input type="radio" id="reg_yes" name="registered" value="Yes" required>
-                                    <label for="reg_yes">Yes</label>
-                                    <input type="radio" id="reg_no" name="registered" value="No" class="ms-3">
-                                    <label for="reg_no">No</label>
-                            </div>
-                            <div class="col-6">
-                                <label class="fw-bold d-block">With Medical Clearance?</label>
-                                    <input type="radio" id="med_yes" name="medical" value="Yes" required>
-                                    <label for="med_yes">Yes</label>
-                                    <input type="radio" id="med_no" name="medical" value="No" class="ms-3">
-                                    <label for="med_no">No</label>
-                            </div>
+                    <div class="row text-center mt-3">
+                        <div class="col-6">
+                            <label class="fw-bold d-block">Registered Online?</label>
+                            <input type="radio" id="reg_yes" name="registered" value="Yes">
+                            <label for="reg_yes">Yes</label>
+                            <input type="radio" id="reg_no" name="registered" value="No" class="ms-3">
+                            <label for="reg_no">No</label>
                         </div>
+                        <div class="col-6">
+                            <label class="fw-bold d-block">With Medical Clearance?</label>
+                                <input type="radio" id="med_yes" name="medical" value="Yes">
+                                <label for="med_yes">Yes</label>
+                                <input type="radio" id="med_no" name="medical" value="No" class="ms-3">
+                                <label for="med_no">No</label>
+                        </div>
+                    </div>
+                        <br>
+                        
+                        <!-- CHECKER BUTTON -->
+                        <button class="btn w-100 fw-bold py-2" py-click="check_eligibility"> Check Eligibility </button>
 
-                    <br>
+                        <div class="divider"></div>
 
-                    <button class="btn w-100 fw-bold py-2" py-click="check_eligibility"> Check </button>
-
-                    <div class="divider"></div>
-                    
-                    <!-- OUTPUT -->
-                    <h4>Result</h4>
-                    <div id="result">No result yet.</div>
+                        <!-- DISPLAY OF RESULTS -->
+                        <h4>Result</h4>
+                        <div id="result">No result yet.</div>
 
                 </div>
             </div>
@@ -242,3 +244,4 @@
 </body>
 
 </html>
+
