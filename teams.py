@@ -1,4 +1,4 @@
-# Team Checker
+# Seatwork #2: Intramurals Eligibility Checker
 from pyscript import document, display
 
 
