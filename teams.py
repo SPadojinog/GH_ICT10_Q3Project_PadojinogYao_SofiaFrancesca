@@ -2,6 +2,8 @@
 from pyscript import document, display
 
 
+from pyscript import document, display
+
 def check_eligibility(e):
     registered_input = document.querySelector('input[name="registered"]:checked')
     medical_input = document.querySelector('input[name="medical"]:checked')
@@ -10,20 +12,23 @@ def check_eligibility(e):
 
     document.getElementById("result").innerHTML = ""
 
-    # INFORMATION
-    if not grade and not section and not registered and not medical:
-        display(f"❌ Please fill all fields.", target="result")
+    if not grade_input or not section_input or not registered_input or not medical_input:
+        display("❌ Please fill all fields.", target="result")
+        return
 
-    grade = int(grade)
-    registered = registered.value
-    medical = medical.value
+    grades = int(grade_input)
+    registered = registered_input.value
+    medical = medical_input.value
 
     if registered != "Yes":
-        display(f"❌ You must register online.", target="result")
+        display("❌ You must register online.", target="result")
+        return
     if medical != "Yes":
-        display(f"❌ You need medical clearance.", target="result")
-    if grade < 7 or grade > 10:
-        display(f"❌ Only Grades 7-10 are eligible.", target="result")
+        display("❌ You need medical clearance.", target="result")
+        return
+    if grades < 7 or grades > 10:
+        display("❌ Only Grades 7-10 are eligible.", target="result")
+        return
 
     teams = {
         "emerald": "Blue Bears 🐻",
@@ -32,10 +37,7 @@ def check_eligibility(e):
         "topaz": "Green Hornets 🐝"
     }
 
-    if section in teams:
-        display(f"🎉 Eligible! You are Team {teams[section]}!", target="result")
+    if section_input in teams:
+        display(f"🎉 Eligible! You are Team {teams[section_input]}!", target="result")
     else:
-        display(f"❌ Invalid section.", target="result")
-
-
-
+        display("❌ Invalid section.", target="result")
