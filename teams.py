@@ -2,8 +2,6 @@
 from pyscript import document, display
 
 
-from pyscript import document, display
-
 def check_eligibility(e):
     registered_input = document.querySelector('input[name="registered"]:checked')
     medical_input = document.querySelector('input[name="medical"]:checked')
@@ -41,3 +39,4 @@ def check_eligibility(e):
         display(f"🎉 Eligible! You are Team {teams[section_input]}!", target="result")
     else:
         display("❌ Invalid section.", target="result")
+
