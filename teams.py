@@ -1,7 +1,6 @@
 # Team Checker
 from pyscript import document, display
 
-
 def check_eligibility(e):
     registered_input = document.querySelector('input[name="registered"]:checked')
     medical_input = document.querySelector('input[name="medical"]:checked')
@@ -10,34 +9,33 @@ def check_eligibility(e):
 
     document.getElementById("result").innerHTML = ""
 
-    # Check
+    # Check if fields are empty
     if not grade_input or not section_input or not registered_input or not medical_input:
         display("❌ Please fill all fields.", target="result")
-        return
 
-    grade = int(grade_input)
-    registered = registered_input.value
-    medical = medical_input.value
-
-    # Checker
-    if registered != "Yes":
-        display("❌ You must register online.", target="result")
-        return
-    elif medical != "Yes":
-        display("❌ You need medical clearance.", target="result")
-        return
-    elif grade < 7 or grade > 10:
-        display("❌ Only Grades 7-10 are eligible.", target="result")
-        return
-
-    teams = {
-        "emerald": "Blue Bears 🐻",
-        "ruby": "Yellow Tigers 🐯",
-        "sapphire": "Red Bulldogs 🐶",
-        "topaz": "Green Hornets 🐝"
-    }
-
-    if section_input in teams:
-        display(f"🎉 Congratulations! You are Eligible! You're Team {teams[section_input]}!", target="result")
     else:
-        display("❌ Invalid section.", target="result")
+        grade = int(grade_input)
+        registered = registered_input.value
+        medical = medical_input.value
+
+        if registered != "Yes":
+            display("❌ You must register online.", target="result")
+
+        elif medical != "Yes":
+            display("❌ You need medical clearance.", target="result")
+
+        elif grade < 7 or grade > 10:
+            display("❌ Only Grades 7-10 are eligible.", target="result")
+
+        else:
+            teams = {
+                "emerald": "Blue Bears 🐻",
+                "ruby": "Yellow Tigers 🐯",
+                "sapphire": "Red Bulldogs 🐶",
+                "topaz": "Green Hornets 🐝"
+            }
+
+            if section_input in teams:
+                display(f"🎉 Congratulations! You are Eligible! You're Team {teams[section_input]}!", target="result")
+            else:
+                display("❌ Invalid section.", target="result")
