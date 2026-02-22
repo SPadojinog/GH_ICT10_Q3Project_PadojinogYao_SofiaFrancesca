@@ -11,6 +11,8 @@ def check_eligibility(e):
     document.getElementById("result").innerHTML = ""
 
     # ACCOUNT INFORMATION
+    if registered_input and medical_input and grade_input and section_input == "":
+        display("❌ Please answer the form first.", target="result")
     if registered_input == "":
         display("❌ Please answer if you are registered online.", target="result")
     if medical_input  == "":
@@ -43,3 +45,4 @@ def check_eligibility(e):
         display(f"🎉 Congratulations! You are eligible! You are Team {teams[section_input]}!", target="result")
     else:
         display("❌ Invalid section.", target="result")
+
