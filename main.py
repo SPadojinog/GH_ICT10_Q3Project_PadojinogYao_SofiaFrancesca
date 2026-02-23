@@ -3,7 +3,8 @@ from pyscript import display, document
 
 
 def sign_up_account(e):
-    document.getElementById("output").innerHTML = ""  # clears previous answers
+     # clears previous answers
+    document.getElementById("output").innerHTML = "" 
     username = document.getElementById("username").value.strip() 
     password = document.getElementById("password").value
 
@@ -29,5 +30,6 @@ def sign_up_account(e):
     
     else:
         display("✅ Account successfully created!", target="output")
+
 
 
