@@ -35,7 +35,8 @@ def check_eligibility(e):
             if section_input in teams:  
                 display(f"🎉 Congratulations! You are Eligible! You're Team {teams[section_input]}!", target="result") 
             else: 
-                display(f"❌ Invalid section.", target="result")  #Displays if incorrect section given
+                display(f"❌ Invalid section.", target="result")
+
 
 
 
