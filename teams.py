@@ -12,7 +12,7 @@ def check_eligibility(e):
     document.getElementById("result").innerHTML = "" 
 
     # Check if fields are empty
-    if not grade_input or not section_input or not registered_input or not medical_input:     # Check if fields are empty
+    if not grade_input or not section_input or not registered_input or not medical_input:   
         display(f"❌ Please fill all fields.", target="result") #
 
     else:
@@ -39,4 +39,5 @@ def check_eligibility(e):
                 display(f"🎉 Congratulations! You are Eligible! You're Team {teams[section_input]}!", target="result") 
             else: 
                 display(f"❌ Invalid section.", target="result")  #Displays if incorrect section given
+
 
