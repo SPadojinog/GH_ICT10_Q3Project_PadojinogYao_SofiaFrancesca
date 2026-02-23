@@ -3,9 +3,9 @@ from pyscript import display, document
 
 
 def player_list (e):
-    document.getElementById('output').innerHTML = " "
+    document.getElementById('output').innerHTML = " " # clears the output / prevent's code from repeating
 
-    players = [
+    players = [ # names of students in 10 Sapphire
         "1) Aseo", "2) Batac", "3) Calanglang", "4) Dee", "5) De Guzman",
         "6) Dolor", "7) Galvez", "8) Garces", "9) Grospe", "10) Hizon",
         "11) Intalan", "12) Ko", "13) Lagman", "14) Law", "15) Macabago",
@@ -13,5 +13,6 @@ def player_list (e):
         "21) Padojinog", "22) Rivera", "23) Shrestha", "24) Uy", "25) Yao"
     ]
 
-    for player in players:
+    for player in players: # displays the list when the 'output' button is clicked
         display(player, target='output')
+
