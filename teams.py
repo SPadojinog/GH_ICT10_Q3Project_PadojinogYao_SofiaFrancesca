@@ -11,7 +11,7 @@ def check_eligibility(e):
 
     # Check if fields are empty
     if not grade_input or not section_input or not registered_input or not medical_input:
-        display("❌ Please fill all fields.", target="result")
+        display(f"❌ Please fill all fields.", target="result")
 
     else:
         grade = int(grade_input)
@@ -19,11 +19,11 @@ def check_eligibility(e):
         medical = medical_input.value
 
         if registered != "Yes":
-            display("❌ You must register online.", target="result")
+            display(f"❌ You must register online.", target="result")
         elif medical != "Yes":
-            display("❌ You need medical clearance.", target="result")
+            display(f"❌ You need medical clearance.", target="result")
         elif grade < 7 or grade > 10:
-            display("❌ Only Grades 7-10 are eligible.", target="result")
+            display(f"❌ Only Grades 7-10 are eligible.", target="result")
         else:
             teams = {
                 "emerald": "Blue Bears 🐻",
@@ -35,5 +35,6 @@ def check_eligibility(e):
             if section_input in teams:
                 display(f"🎉 Congratulations! You are Eligible! You're Team {teams[section_input]}!", target="result")
             else:
-                display("❌ Invalid section.", target="result")
+                display(f"❌ Invalid section.", target="result")
+
 
